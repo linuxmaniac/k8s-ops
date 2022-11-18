@@ -11,7 +11,7 @@ spec:
     systemInformation:
       - manufacturer: Raspberry Pi Foundation
         productName: Raspberry Pi 4 Model B
-        version: D03115
+        version: D03114
   environmentRef:
     name: rpi4
   bootFromDiskMethod: ipxe-sanboot

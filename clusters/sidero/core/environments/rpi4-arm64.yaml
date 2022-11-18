@@ -6,8 +6,10 @@ metadata:
 spec:
   initrd:
     url: https://github.com/siderolabs/talos/releases/download/v1.2.6/initramfs-arm64.xz
+    sha512: 809ac9495630fafa0f704ae519eb6dedea866e686ba823a71110a9dc2e92d20e97a2af074e4a349039eaa5076407a048d929d3c7db91fefa1011e210e85a7324
   kernel:
     url: https://github.com/siderolabs/talos/releases/download/v1.2.6/vmlinuz-arm64
+    sha512: 3a5c9c08cf1cecdcc77360985f8a0b8afa9779630981190453e64a1dd80e8ff4c4bf98347a6108dbede564dda3670038d8a2077bc3db9b326992fd8a259acfb7
     args:
       - console=tty0
       - console=ttyS0

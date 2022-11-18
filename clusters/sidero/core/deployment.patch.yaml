@@ -27,15 +27,14 @@ spec:
         - name: tftp-folder
           emptyDir: {}
       initContainers:
-        - image: ghcr.io/linuxmaniac/raspberrypi4-uefi:v1.2.0
+        - image: ghcr.io/linuxmaniac/raspberrypi4-uefi:v1.3.0-alpha.0-38-g8b975a7-config
           imagePullPolicy: Always
           name: tftp-folder-setup
           command:
-            - cp
+            - sh
           args:
-            - -r
-            - /tftp
-            - /var/lib/sidero/
+            - -c
+            - find /tftp && cp -rv /tftp /var/lib/sidero/ && find /var/lib/sidero/tftp/
           volumeMounts:
             - mountPath: /var/lib/sidero/tftp
               name: tftp-folder
