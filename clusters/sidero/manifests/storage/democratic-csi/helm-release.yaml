@@ -1,0 +1,23 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: democratic-csi
+  namespace: democratic-csi
+spec:
+  interval: 10m
+  releaseName: zfs-iscsi
+  chart:
+    spec:
+      chart: democratic-csi
+      sourceRef:
+        kind: HelmRepository
+        name: democratic-csi
+        namespace: flux-system
+  valuesFrom:
+    - kind: ConfigMap
+      name: zfs-iscsi-values
+    - kind: Secret
+      name: truenas-api-token
+      valuesKey: api-token
+      targetPath: driver.config.httpConnection.apikey
