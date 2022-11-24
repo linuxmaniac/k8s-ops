@@ -7,10 +7,6 @@ metadata:
 spec:
   interval: 10m
   releaseName: zfs-iscsi
-  install:
-    disableWait: true
-  upgrade:
-    disableWait: true
   chart:
     spec:
       chart: democratic-csi

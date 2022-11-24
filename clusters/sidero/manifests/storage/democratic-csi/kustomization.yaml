@@ -9,6 +9,6 @@ configMapGenerator:
   - name: zfs-iscsi-values
     namespace: democratic-csi
     files:
-      - values.yaml
+      - values.yaml=csi-values.yaml
 configurations:
   - kustomizeconfig.yaml
