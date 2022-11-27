@@ -1,0 +1,13 @@
+---
+apiVersion: metal.sidero.dev/v1alpha1
+kind: ServerClass
+metadata:
+  name: pk8s-sc
+spec:
+  selector:
+    matchExpression:
+      - key: metal.sidero.dev/serverclass
+        operator: In
+        values:
+          - trigkey
+          - rpi.8gb

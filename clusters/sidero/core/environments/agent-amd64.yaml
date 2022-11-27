@@ -1,0 +1,29 @@
+---
+apiVersion: metal.sidero.dev/v1alpha1
+kind: Environment
+metadata:
+  name: agent-amd64
+spec:
+  initrd:
+    url: https://github.com/siderolabs/talos/releases/download/v1.2.7/initramfs-amd64.xz
+    sha512: ab0e10b7dd1461914dc0c26f5d480c7225fcc72c145c1be68cae019a5e134eaca6875a52cf2133ca852498085f29ff936976290dbd884370e4c6e32d9fa6e440
+  kernel:
+    url: https://github.com/siderolabs/talos/releases/download/v1.2.7/vmlinuz-amd64
+    sha512: 2d069a7ac5f1636993672352b579486fc62ac6a93723b7e3c4f52ddaaaa138ca184e992ab9e2c29b4c548776f71cbb863e5169e1156c9fc976a862a97d4c2374
+    args:
+      - console=tty0
+      - console=ttyS0
+      - consoleblank=0
+      - earlyprintk=ttyS0
+      - ima_appraise=fix
+      - ima_hash=sha512
+      - ima_template=ima-ng
+      - init_on_alloc=1
+      - initrd=initramfs.xz
+      - nvme_core.io_timeout=4294967295
+      - printk.devkmsg=on
+      - pti=on
+      - random.trust_cpu=on
+      - slab_nomerge=
+      - panic=0
+      - talos.platform=metal

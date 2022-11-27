@@ -1,15 +1,22 @@
 apiVersion: metal.sidero.dev/v1alpha1
 kind: Server
 metadata:
-  name: 00d03114-0000-0000-0000-e45f0135fbb2
+  name: 03000200-0400-0500-0006-000700080009
   labels:
-    metal.sidero.dev/serverclass: rpi.8gb
+    metal.sidero.dev/serverclass: trigkey
 spec:
   accepted: true
   hostname: k3s-master.lab
-  pxeBootAlways: true
   system:
-    manufacturer: Raspberry Pi Foundation
-    productName: Raspberry Pi 4 Model B
-    version: D03114
-    serialNumber: "0000E45F0135FBB2"
+    manufacturer: AZW
+    productName: S5
+    version: Default string
+    serialNumber: "Default string"
+  configPatches:
+    - op: replace
+      path: /machine/install/disk
+      value: /dev/nvme0n1
+    - op: replace
+      path: /machine/install/extraKernelArgs
+      value:
+        - panic=0
