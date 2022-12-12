@@ -7,19 +7,12 @@ spec:
   selector:
     matchLabels:
       metal.sidero.dev/serverclass: rpi.8gb
+  environmentRef:
+    namespace: default
+    name: rpi4-beta
   qualifiers:
     systemInformation:
       - manufacturer: Raspberry Pi Foundation
         productName: Raspberry Pi 4 Model B
         version: D03114
-  environmentRef:
-    name: rpi4
   bootFromDiskMethod: ipxe-sanboot
-  configPatches:
-    - op: replace
-      path: /machine/install/disk
-      value: /dev/mmcblk0
-    - op: add
-      path: /machine/sysctls
-      value:
-        kernel.kexec_load_disabled: 1

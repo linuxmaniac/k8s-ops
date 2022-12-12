@@ -10,4 +10,4 @@ spec:
       serverClassRef:
         apiVersion: metal.sidero.dev/v1alpha1
         kind: ServerClass
-        name: rpi.8gb
+        name: pk8s-sc-worker

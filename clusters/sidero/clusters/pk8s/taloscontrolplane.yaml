@@ -21,10 +21,10 @@ spec:
           value:
             - image: ghcr.io/siderolabs/iscsi-tools:v0.1.4
       generateType: controlplane
-      talosVersion: v1.2.7
+      talosVersion: v1.3.0-beta.2
   infrastructureTemplate:
     apiVersion: infrastructure.cluster.x-k8s.io/v1alpha3
     kind: MetalMachineTemplate
     name: pk8s-cp
   replicas: 3
-  version: v1.25.4
+  version: v1.26.0

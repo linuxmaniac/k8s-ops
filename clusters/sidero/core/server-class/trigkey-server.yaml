@@ -8,11 +8,14 @@ spec:
     matchLabels:
       metal.sidero.dev/serverclass: trigkey
   qualifiers:
-    cpu:
-      - manufacturer: Advanced Micro Devices, Inc.
-        version: AMD Ryzen 5 5560U with Radeon Graphics
     systemInformation:
       - manufacturer: AZW
         productName: S5
+        version: Default string
+  bootFromDiskMethod: ipxe-sanboot
   environmentRef:
     name: agent-amd64-beta
+  configPatches:
+    - op: replace
+      path: /machine/install/disk
+      value: /dev/nvme0n1
