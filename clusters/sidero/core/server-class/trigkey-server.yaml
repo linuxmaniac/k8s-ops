@@ -4,17 +4,17 @@ kind: ServerClass
 metadata:
   name: trigkey
 spec:
-  selector:
-    matchLabels:
-      metal.sidero.dev/serverclass: trigkey
   qualifiers:
+    cpu:
+      - manufacturer: Advanced Micro Devices, Inc.
+        version: AMD Ryzen 5 5560U with Radeon Graphics
     systemInformation:
       - manufacturer: AZW
         productName: S5
         version: Default string
   bootFromDiskMethod: ipxe-sanboot
   environmentRef:
-    name: agent-amd64-beta
+    name: agent-amd64
   configPatches:
     - op: replace
       path: /machine/install/disk

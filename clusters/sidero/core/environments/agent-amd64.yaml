@@ -5,11 +5,11 @@ metadata:
   name: agent-amd64
 spec:
   initrd:
-    url: https://github.com/siderolabs/talos/releases/download/v1.2.7/initramfs-amd64.xz
-    sha512: ab0e10b7dd1461914dc0c26f5d480c7225fcc72c145c1be68cae019a5e134eaca6875a52cf2133ca852498085f29ff936976290dbd884370e4c6e32d9fa6e440
+    url: https://github.com/siderolabs/talos/releases/download/v1.3.0/initramfs-amd64.xz
+    sha512: 3e48e10dde191bf63b499af73d7857405d91bb10bf8ffc4482492dea737648034f89eb8d62aed268d1a890f49c1fd9f27c27a397e0f872062b048534b3b23df4
   kernel:
-    url: https://github.com/siderolabs/talos/releases/download/v1.2.7/vmlinuz-amd64
-    sha512: 2d069a7ac5f1636993672352b579486fc62ac6a93723b7e3c4f52ddaaaa138ca184e992ab9e2c29b4c548776f71cbb863e5169e1156c9fc976a862a97d4c2374
+    url: https://github.com/siderolabs/talos/releases/download/v1.3.0/vmlinuz-amd64
+    sha512: 463e7ee4427de400ea1f4e3eff75c18014a0198a04af5bd44b637705a595401fd3c13eeb677fdb6470c6820c172581d6010f826f6ffbda93ebd8338436513c24
     args:
       - console=tty0
       - console=ttyS0

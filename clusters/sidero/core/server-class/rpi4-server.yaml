@@ -4,12 +4,9 @@ kind: ServerClass
 metadata:
   name: rpi.8gb
 spec:
-  selector:
-    matchLabels:
-      metal.sidero.dev/serverclass: rpi.8gb
   environmentRef:
     namespace: default
-    name: rpi4-beta
+    name: rpi4
   qualifiers:
     systemInformation:
       - manufacturer: Raspberry Pi Foundation
