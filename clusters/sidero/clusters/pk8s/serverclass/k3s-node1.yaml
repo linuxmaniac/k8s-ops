@@ -7,7 +7,7 @@ metadata:
     metal.sidero.dev/serverclass: rpi.8gb
     metal.sidero.dev/machine.type: controlplane
 spec:
-  accepted: false
+  accepted: true
   hostname: k3s-node1.lab
   pxeBootAlways: true
   environmentRef:

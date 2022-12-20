@@ -20,6 +20,9 @@ spec:
           path: /machine/install/extensions
           value:
             - image: ghcr.io/siderolabs/iscsi-tools:v0.1.4
+        - op: add
+          path: /cluster/allowSchedulingOnMasters
+          value: true
       generateType: controlplane
       talosVersion: v1.3.0
   infrastructureTemplate:

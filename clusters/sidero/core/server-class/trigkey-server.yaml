@@ -13,8 +13,6 @@ spec:
         productName: S5
         version: Default string
   bootFromDiskMethod: ipxe-sanboot
-  environmentRef:
-    name: agent-amd64
   configPatches:
     - op: replace
       path: /machine/install/disk
